@@ -1,0 +1,663 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+@import "../components/CommonTable/table.scss";
+$font-family: "Nunito Sans";
+
+html,
+body div {
+  font-family: $font-family !important;
+}
+
+.ant-input,
+.ant-btn,
+.ant-select-selector,
+.ant-dropdown,
+.ant-menu,
+.ant-modal,
+.ant-tabs {
+  font-family: $font-family !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: $font-family !important;
+}
+
+.loader {
+  .ant-modal-content {
+    display: contents !important;
+  }
+
+  .ant-modal-body {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+.auth-layout {
+  @media screen and (min-width: 1920px) and (min-height: 1080px) {
+    .auth-layout {
+      height: 100vh;
+    }
+  }
+
+  .skillo-img {
+    height: calc(100vh - 30px);
+  }
+}
+
+// sidebar menu
+.custom-input {
+  font-family: $font-family;
+  color: #333;
+
+  ::placeholder {
+    color: #828282;
+  }
+
+  align-items: center;
+}
+
+.custom-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  .ant-menu-item {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 2px 0;
+    padding: 10px 15px !important;
+    border-radius: 8px 0 0 8px;
+
+    &:hover {
+      background-color: #e2eefe !important;
+    }
+
+    .ant-menu-title-content {
+      width: 100%;
+    }
+  }
+
+  li.ant-menu-item:nth-last-child(2) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: none !important;
+    // cursor: none;
+  }
+
+  .ant-menu-submenu-vertical {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 2px 0;
+    padding: 10px 15px !important;
+    border-radius: 8px 0 0 8px;
+
+    &:hover {
+      background-color: #e2eefe !important;
+    }
+
+    .ant-menu-submenu-title {
+      height: auto !important;
+      line-height: normal !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100%;
+
+      &:hover {
+        background-color: #e2eefe !important;
+      }
+    }
+
+    .ant-menu-submenu-popup {
+      // inset: 195px auto auto 225px !important;
+      left: 225px !important;
+
+      .ant-menu-sub {
+        background-color: #e2eefe;
+        padding: 10px;
+
+        .ant-menu-item {
+          background: transparent !important;
+
+          &:hover {
+            background-color: #ffffff !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-menu-submenu-arrow {
+  display: none;
+}
+
+// sidebar menu end
+
+.divider {
+  width: 86px;
+  height: 0px; // This can be omitted as the border will handle the height
+  border-top: 4px solid #263a67; // This creates the horizontal line
+}
+
+.divider-svg {
+  width: 86px;
+  height: 4px;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top: 4px solid #263a67;
+  }
+}
+
+.auth-sidebar-image {
+  .ant-image {
+    width: 100%;
+    // height: 217px;
+  }
+}
+
+// .custom-menu .ant-menu-item:hover {
+//   background-color: #e2eefe !important;
+// }
+
+.custom-menu .ant-menu-item {
+  padding-left: 15px !important;
+}
+
+.custom-menu-icon .ant-menu-item {
+  padding-left: 21px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.custom-menu .ant-menu-item .ant-menu-item-selected {
+  background-color: red !important;
+}
+
+.custom-btn {
+  border-radius: 8px;
+  background: #4379ee;
+  display: inline-flex;
+  height: 50px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--Design-Background-Primary, #fff);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.custom-divider {
+  border-radius: 14px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  padding: 0px !important;
+}
+
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload.ant-upload-select {
+  border: none !important;
+}
+
+.heading-title {
+  color: #313d4f;
+  font-family: $font-family;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.custom-heading-btn {
+  background: #4379ee;
+  color: white;
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  &.form {
+    height: 50px !important;
+  }
+  &.secondary {
+    background: transparent !important;
+    border-radius: 8px;
+    border: 1px solid #4379ee;
+    color: #4379ee;
+  }
+}
+
+.custom-card {
+  border-radius: 14px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.ant-input.ant-input-lg {
+  height: 40px !important;
+}
+
+.survey-input {
+  &.ant-input.ant-input-lg {
+    height: 60px !important;
+    margin-top: 0px !important;
+  }
+}
+
+.switch-toggle {}
+
+.table-search-input {
+  display: flex;
+  align-items: center !important;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #bdbdbd;
+  background-color: #f5f6fa;
+  color: #828282;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  max-width: 230px !important;
+  width: 100%;
+  .ant-input {
+    padding-top: 2px !important;
+    display: flex;
+    align-items: center; // Ensure text is vertically centered // Adjust the height as needed
+    // padding: 0 8px; // Adjust padding to center content
+  }
+  .ant-input-prefix {
+    display: flex;
+    align-items: center; // Ensure icon is vertically centered
+    margin-right: 8px; // Add space between icon and input text
+  }
+}
+
+.tab-system-company {
+  border-radius: 10px;
+  border: 0.6px solid #d5d5d5;
+  background: #f9f9fb;
+  text-align: center;
+  font-family: $font-family;
+  font-size: 14px;
+  font-style: normal;
+  display: flex;
+  font-weight: 700;
+  border: 1px solid #bdbdbd;
+  background-color: #f9f9fb;
+  color: #bdbdbd;
+  width: 100%;
+  max-width: 484px !important;
+  max-height: 40px;
+
+  div {
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    color: #bdbdbd;
+    transition: all 0.3s ease;
+    position: relative;
+    text-wrap: nowrap;
+    &:hover {
+      color: #4379ee;
+    }
+
+    &.selected {
+      color: #4379ee;
+    }
+  }
+
+  .before-line::before {
+    content: "";
+    position: absolute;
+    right: 100%; // Position the line to the left of the "Vertical" tab
+    top: 0; // Adjust this value to position the line vertically in the middle
+    bottom: 10%; // Adjust this value to position the line vertically in the middle
+    width: 1px;
+    background-color: #bdbdbd;
+    height: 100%; // Adjust this value to control the height of the line
+  }
+}
+
+.custom-select-dropdown {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 10px !important;
+  background: #fff;
+  color: #828282;
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  min-height: 40px;
+  border-width: none !important;
+  border: none !important;
+}
+
+.ant-select-selection-item {
+  color: #828282;
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.ant-select-item-option-content {
+  color: #828282;
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.field-error {
+  color: #ff4d4f;
+  text-align: left;
+}
+
+.filter-table {
+  height: 70px;
+  border-radius: 14px;
+  border: 0.6px solid #d5d5d5;
+  background: #f9f9fb;
+  color: #333;
+  font-family: $font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; // Added to align children vertically center
+
+  .filter-icon {
+    margin-left: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      margin-left: 24px;
+      content: ""; // Added to ensure the pseudo-element is rendered
+      height: 70px;
+    }
+  }
+
+  .ant-select {
+    flex-grow: 1; // Added to make the Select take up remaining space
+    height: 70px;
+    border: 0.6px solid #e8e8e8 !important;
+    background: #f9f9fb;
+  }
+
+  .ant-select-selector {
+    border: none !important;
+    background: #f9f9fb !important;
+  }
+
+  .reset-button {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-height: 70px;
+    height: 100%;
+    // border-radius: none !important;
+    color: #828282;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    cursor: pointer;
+  }
+}
+
+.divider-level-table {
+  border-top: 1px solid #e8e8e8 !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+}
+
+.custom-tab-frequency {
+  border-color: #979797;
+  color: #bdbdbd;
+  text-align: center;
+  font-family: $font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+
+  /* 100% */
+  ::before {
+    border-color: #979797 !important;
+  }
+}
+
+.border-remove {
+  .ant-select-selector {
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+  }
+
+  .ant-select-selection-item {
+    display: flex;
+
+    div {
+      align-items: center;
+    }
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 2px !important;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: white !important;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: white !important;
+}
+
+.custom-ans-preview-collapse {
+  margin-top: 20px;
+  background: transparent !important;
+
+  .ant-collapse-item {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+    border-radius: 14px !important;
+    border: 1px solid #e8e8e8;
+    margin-top: 20px;
+    &.ant-collapse-item-active .ant-collapse-header-text {
+      // margin-bottom: 10px;
+    }
+    &.ant-collapse-content-box{
+      padding: 10px 16px !important;
+    }
+  }
+}
+
+.plus-icon path {
+  transition: stroke 0.3s ease !important;
+}
+
+.plus-icon:hover path {
+  stroke: #4379ee !important;
+  /* Change stroke color on hover */
+}
+
+.ant-picker-suffix {
+  order: -1;
+  /* Moves the icon to the left side */
+  margin-right: 5px;
+}
+
+.ant-picker {
+  :hover {
+    cursor: pointer;
+  }
+
+  height: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  &.ant-picker-outlined,
+  .ant-picker-range {
+    min-width: 288px;
+    width: 100%;
+  }
+}
+
+.ant-picker:hover .ant-picker-suffix {
+  visibility: visible;
+  /* Hides the icon */
+  opacity: 1 !important;
+}
+
+// .custom-checkbox {
+//   &.ant-checkbox-inner {
+//     border: 3px solid #BDBDBD !important;
+//   }
+//   .ant-checkbox-checked .ant-checkbox-inner:after{
+//     border-color:#4379EE !important ;
+//   }
+// }
+
+.custom-checkbox {
+  .ant-checkbox-inner {
+    border: 2px solid #bdbdbd !important; // Border color when not checked
+    background-color: white !important; // Background color when not checked
+  }
+
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      border-color: #4379ee !important; // Border color when checked
+      background-color: white !important; // Background color when checked
+      padding: 1px;
+    }
+
+    .ant-checkbox-inner::after {
+      border-color: #4379ee !important; // Checkmark color when checked
+    }
+  }
+}
+
+.selected-item-table {
+  // opacity: 0.5;
+  background-color: #edf3ff !important;
+  color: #717275; // color: #45464d !important;
+}
+
+.selected-item-table:hover {
+  background-color: #edf3ff !important;
+  color: #717275; // color: #45464d !important;
+}
+
+.selected-item-table td {
+  // opacity: 0.6;
+  // background-color: #EDF3FF !important;
+  background: none !important;
+  color: #717275; // color: #45464d !important;
+}
+
+.selected-item-table td.ant-table-column-sort:hover {
+  background-color: #edf3ff !important;
+  color: #717275; // color: #45464d !important;
+}
+
+.custom-input::placeholder {
+  color: #828282;
+  font-size: 16px;
+}
+
+.custom-select .ant-select-selection-placeholder {
+  color: #828282;
+  font-size: 16px;
+}
+
+.ant-btn {
+  height: 40px ;
+}
+
+.list-search-input {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #E8E8E8;
+  background-color: #F5F6FA;
+  color: #828282 !important;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  min-width: 230px !important;
+  width: 100%;
+  align-items: center;
+}
+
+.custom-text-color.ant-select-single.ant-select-lg.ant-select-show-arrow .ant-select-selection-item {
+  color: #4f4f4f !important;
+  cursor: pointer !important;
+}
+
+.selected-data .ant-select-selection-item {
+  cursor: pointer !important;
+}
+
+.list-data-wrapped {
+  padding-top: 8px !important;
+  padding-bottom: 0px !important;
+}
+
+.ant-input-number-input {
+  text-align: center !important;
+}
+
+.image-card {
+  box-sizing: 0px 13px 61px 0px rgba(169, 169, 169, 0.37) !important;
+}
+
+.custom-image-drag .ant-upload-drag {
+  border: none !important;
+}
+
+
+.text-list {
+  font-weight: 600 !important;
+}
+
+.course-table {
+  padding-top: 0px !important;
+}
